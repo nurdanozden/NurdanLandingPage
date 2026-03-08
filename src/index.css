@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+/* ── Custom Theme — Spring Garden ────────────────── */
+@theme {
+  --color-bg-base: #fefdf8;
+  --color-bg-card: #ffffff;
+  --color-accent: #e8739a;
+  --color-accent-green: #6db87b;
+  --color-accent-yellow: #f5c842;
+  --color-accent-sky: #7ec8e3;
+  --color-text-primary: #3b3b3b;
+  --color-text-muted: #7a7a7a;
+  --color-text-heading: #2d2d2d;
+
+  --font-heading: "Playfair Display", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-handwriting: "Caveat", cursive;
+}
+
+/* ── Base ────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  /**
+   * Multi-layer pastel-pink background:
+   * 1. Soft radial bokeh lights for depth
+   * 2. Diagonal linear gradient as base tone
+   * background-color is the fallback / blending base
+   */
+  background-color: #ebaccb;
+  background-image:
+    radial-gradient(ellipse at 12%  8%,  rgba(255, 218, 234, 0.60) 0%, transparent 38%),
+    radial-gradient(ellipse at 88%  6%,  rgba(230, 145, 188, 0.38) 0%, transparent 36%),
+    radial-gradient(ellipse at 78% 90%,  rgba(245, 170, 208, 0.38) 0%, transparent 40%),
+    radial-gradient(ellipse at  8% 85%,  rgba(255, 220, 238, 0.45) 0%, transparent 36%),
+    radial-gradient(ellipse at 50% 50%,  rgba(248, 195, 220, 0.25) 0%, transparent 55%),
+    linear-gradient(
+      145deg,
+      #e4a0bf 0%,
+      #eeb4ce 18%,
+      #e8abc8 35%,
+      #f0bcd4 52%,
+      #e9adc9 68%,
+      #f2bdd2 82%,
+      #edaecb 100%
+    );
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+}
+
+#root {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* ── Flying birds ────────────────────────────────── */
+@keyframes flyAcross {
+  0%   { transform: translateX(-120px) translateY(0px);  opacity: 0; }
+  4%   { opacity: 0.7; }
+  92%  { opacity: 0.7; }
+  100% { transform: translateX(112vw) translateY(-60px); opacity: 0; }
+}
+
+@keyframes flyAcrossReverse {
+  0%   { transform: translateX(112vw) translateY(0px) scaleX(-1);  opacity: 0; }
+  4%   { opacity: 0.6; }
+  92%  { opacity: 0.6; }
+  100% { transform: translateX(-120px) translateY(-50px) scaleX(-1); opacity: 0; }
+}
+
+/* ── Floating petals ─────────────────────────────── */
+@keyframes petal-fall {
+  0% { transform: translateY(-20px) translateX(0) rotate(0deg); opacity: 0; }
+  10% { opacity: 0.6; }
+  90% { opacity: 0.6; }
+  100% { transform: translateY(100vh) translateX(80px) rotate(360deg); opacity: 0; }
+}
+
+/* ── Sunlight glow pulse ─────────────────────────── */
+@keyframes sunlight-pulse {
+  0%, 100% { opacity: 0.18; transform: scale(1); }
+  50% { opacity: 0.28; transform: scale(1.05); }
+}
+
+/* ── Gallery Scroll ──────────────────────────────── */
+@keyframes scroll-x {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ── Gentle float ────────────────────────────────── */
+@keyframes gentle-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* ── Selection ───────────────────────────────────── */
+::selection {
+  background: rgba(232, 115, 154, 0.25);
+  color: #2d2d2d;
+}
+
+/* ── Scrollbar ───────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(232, 115, 154, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(232, 115, 154, 0.5);
+}
