@@ -13,7 +13,7 @@ const LETTER_PARAGRAPHS = [
     className: "text-lg sm:text-xl font-medium text-rose-400",
   },
   {
-    text: "Bilgisayar mühendisliği 3. öğrencisiyim 👩‍💻 ve fikirleri gerçek çalışan projelere dönüştürmeyi seviyorum. 💡✨",
+    text: "Bilgisayar mühendisliği 3.sınıf öğrencisiyim 👩‍💻 ve fikirleri gerçek çalışan projelere dönüştürmeyi seviyorum. 💡✨",
   },
   {
     text: "Sistemlerin perde arkasında nasıl çalıştığını keşfetmek hoşuma gidiyor — özellikle API'ler, veritabanları ve her şeyi birbirine bağlayan o mantık kısmı. 🛠️ Kod yazmak benim için biraz bulmaca çözmek gibi: bazen sinir bozucu ama çözüldüğünde inanılmaz tatmin edici. 🧩✨",

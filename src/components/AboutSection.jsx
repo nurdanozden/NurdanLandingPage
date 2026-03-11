@@ -22,7 +22,7 @@ const cards = [
   {
     icon: "💻",
     title: "Teknolojiler",
-    value: ".NET • HTML • CSS • JavaScript",
+    value: ".NET • HTML • CSS • JavaScript • Java • Python • C# • Docker • React",
     color: "border-violet-200 hover:shadow-violet-100/50",
   },
   {
