@@ -3,7 +3,7 @@ import HeroSection from "./components/HeroSection";
 import LetterSection from "./components/LetterSection";
 import AboutSection from "./components/AboutSection";
 import GallerySection from "./components/GallerySection";
-import SpriteAnimationSection from "./components/SpriteAnimationSection";
+import HobbiesSection from "./components/HobbiesSection";
 import PhotographySection from "./components/PhotographySection";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
         <LetterSection />
         <AboutSection />
         <GallerySection />
-        <SpriteAnimationSection />
+        <HobbiesSection />
         <PhotographySection />
       </main>
     </>

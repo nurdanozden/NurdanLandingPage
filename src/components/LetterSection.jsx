@@ -83,11 +83,13 @@ export default function LetterSection() {
                 transition={{ delay: 0.15 * i, duration: 0.55, ease: "easeOut" }}
                 className={
                   p.className ??
-                  "text-base sm:text-lg leading-relaxed text-stone-600"
+                  "text-base sm:text-lg text-stone-700"
                 }
                 style={{
                   fontFamily: "var(--font-handwriting)",
-                  fontSize: p.className ? undefined : "1.15rem",
+                  fontSize: p.className ? undefined : "1.3rem",
+                  lineHeight: p.className ? undefined : "2",
+                  fontWeight: p.className ? undefined : 500,
                   whiteSpace: "pre-wrap",
                 }}
               >

@@ -31,11 +31,15 @@ export default function SpringBackground() {
     () =>
       Array.from({ length: 18 }, (_, i) => ({
         id: `bird-${i}`,
-        top: `${rand(3, 55)}%`,
-        size: rand(22, 56),
-        delay: `${rand(0, 30)}s`,
-        duration: `${rand(10, 28)}s`,
-        reverse: i % 3 === 0,
+        // Cluster vertically in the upper-left region
+        top: `${rand(6, 52)}%`,
+        size: rand(20, 48),
+        // Very short delays so all birds start near the left edge on load
+        delay: `${rand(0, 4)}s`,
+        // Longer duration so birds spend more time visible on the left
+        duration: `${rand(20, 38)}s`,
+        // No reverse birds — all fly left-to-right, originating from the left
+        reverse: false,
         colorIdx: i % 4,
       })),
     []
