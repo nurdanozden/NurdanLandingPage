@@ -90,8 +90,13 @@ body {
 
 /* ── Gallery Scroll ──────────────────────────────── */
 @keyframes scroll-x {
-  0% { transform: translateX(0); }
+  0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
+}
+
+@keyframes scroll-x-right {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
 }
 
 /* ── Gentle float ────────────────────────────────── */

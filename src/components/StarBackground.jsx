@@ -28,20 +28,28 @@ function BirdSvg({ className, style }) {
 export default function SpringBackground() {
   /* ── Flying birds ──────────────────────────────── */
   const birds = useMemo(
-    () =>
-      Array.from({ length: 18 }, (_, i) => ({
-        id: `bird-${i}`,
-        // Cluster vertically in the upper-left region
-        top: `${rand(6, 52)}%`,
+    () => [
+      // Sol üst köşeden sağa — 12 kuş
+      ...Array.from({ length: 12 }, (_, i) => ({
+        id: `bird-tl-${i}`,
+        top: `${rand(6, 48)}%`,
         size: rand(20, 48),
-        // Very short delays so all birds start near the left edge on load
         delay: `${rand(0, 4)}s`,
-        // Longer duration so birds spend more time visible on the left
         duration: `${rand(20, 38)}s`,
-        // No reverse birds — all fly left-to-right, originating from the left
         reverse: false,
         colorIdx: i % 4,
       })),
+      // Sağ alt köşeden sola — 12 kuş
+      ...Array.from({ length: 12 }, (_, i) => ({
+        id: `bird-br-${i}`,
+        top: `${rand(58, 90)}%`,
+        size: rand(18, 38),
+        delay: `${rand(0, 6)}s`,
+        duration: `${rand(24, 42)}s`,
+        reverse: true,
+        colorIdx: (i + 2) % 4,
+      })),
+    ],
     []
   );
 

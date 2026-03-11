@@ -2,7 +2,6 @@ import SpringBackground from "./components/StarBackground";
 import HeroSection from "./components/HeroSection";
 import LetterSection from "./components/LetterSection";
 import AboutSection from "./components/AboutSection";
-import GallerySection from "./components/GallerySection";
 import HobbiesSection from "./components/HobbiesSection";
 import PhotographySection from "./components/PhotographySection";
 
@@ -14,7 +13,6 @@ function App() {
         <HeroSection />
         <LetterSection />
         <AboutSection />
-        <GallerySection />
         <HobbiesSection />
         <PhotographySection />
       </main>
